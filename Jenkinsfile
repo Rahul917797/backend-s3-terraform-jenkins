@@ -37,19 +37,19 @@ stages {
       sh 'terraform apply -auto-approve'
     }
   }
+}
 
-  post{
-    success{
-      echo 'pipeline created successfully'
-    }
-    failure{
-      echo 'pipeline Failed'
-    }
-
-   }
+post {
+  success {
+    echo 'pipeline created successfully'
+  }
+  failure {
+    echo 'pipeline Failed'
+  }
  }
+}
 
-}   
+  
 
 
 
